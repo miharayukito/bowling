@@ -19,6 +19,8 @@ describe "ボウリングのスコア計算" do
     context "全ての投球で1ピンずつ倒した場合" do
       it "20になること" do
         add_many_scores(20, 1)
+        # 合計を計算
+        @game.calc_score
         expect(@game.total_score).to eq 20
       end
     end
